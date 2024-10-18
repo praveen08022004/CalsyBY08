@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<audio id="myAudio">
+		<source src="click.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	<div id="calculator">
+		<input type="text" id="display">
+		<div class="row">
+		<button class="button" onclick="clearDisplay(); playAudio()" id="symbols">C</button>
+		<button class="button" onclick="deleteChar();playAudio()" id="symbols">DEL</button>
+        <button class="button" onclick="appendValue('.'); playAudio()" id="symbols">.</button>
+        <button class="button" onclick="appendValue('*'); playAudio()" id="symbols">x</button>
+        </div>
+		<div class="row">
+		<button class="button" onclick="appendValue(7); playAudio()">7</button>
+		<button class="button" onclick="appendValue(8); playAudio()">8</button>
+		<button class="button" onclick="appendValue(9); playAudio()">9</button>
+		<button class="button" onclick="appendValue('/'); playAudio()" id="symbols">/</button>
+		</div>
+        <div class="row">
+		<button class="button" onclick="appendValue(4);playAudio()">4</button>
+		<button class="button" onclick="appendValue(5); playAudio()">5</button>
+		<button class="button" onclick="appendValue(6); playAudio()">6</button>
+        <button class="btn" onclick="appendValue('Created by Praveen.!'); playAudio()"  id = "special">
+            <i class="fa-regular fa-heart"></i>
+        </button>
+    	</div>
+        <div class="row">
+		<button class="button" onclick="appendValue(1); playAudio()">1</button>
+		<button class="button" onclick="appendValue(2); playAudio()">2</button>
+		<button class="button" onclick="appendValue(3); playAudio()">3</button>
+		<button class="button" onclick="appendValue('-'); playAudio()" id="symbols">-</button>
+		</div>
+        <div class="row">
+		<button class="button" onclick="appendValue(0); playAudio()">0</button>
+		<button class="button" onclick="appendValue('00'); playAudio()">00</button>
+		<button class="button" onclick="appendValue('='); playAudio()">=</button>
+		<button class="button" onclick="appendValue('+'); playAudio()" id="symbols">+</button>
+        </div>
+	</div>
+	<script src="logic.js"> </script>
+</body>
+</html>
